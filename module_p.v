@@ -25,5 +25,10 @@ module module_p(
     // goal: out = ((in1^in2)&1)^(in2&1)
     // modules a1 and a2 are given
     // you can only define new registers or wires, and use module a1 and a2
+  wire w1, w2, w3;
+  a1 m1(in1, in2, w1);
+  a2 m2(w1, w2);
+  a2 m3(in2, w3);
+  a1 m4(w2, w3, out);
 
 endmodule
