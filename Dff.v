@@ -9,5 +9,9 @@ module Dff(
     // Use a clocked always block
     // copy d to q at every positive edge of clk, and reset q to 0 if reset signal is 1
     // Clocked always blocks should use non-blocking assignments
-
+  always @(posedge clk) begin
+    if (reset)
+      q <= 0;
+    else q <= d;
+  end
 endmodule
