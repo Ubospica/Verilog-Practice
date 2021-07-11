@@ -1,6 +1,6 @@
 module zdo (
     input wire rst
 );
-    // TO DO
-    
+    wire zdo;
+    assign zdo = rst ? 0 : ~zdo;
 endmodule
